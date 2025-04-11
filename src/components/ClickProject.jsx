@@ -50,31 +50,31 @@ export default function ClickProject({ projects, projectId, setPage, setProjects
   };
 
   if (!project) {
-    return <p className="text-center mt-16">프로젝트를 로드 중입니다...</p>;
+    return <p className="text-center mt-16 dark:text-white">프로젝트를 로드 중입니다...</p>;
   }
 
   return (
     <div className="w-[35rem] mt-16">
       <header className="pb-4 mb-4 border-b-2 border-stone-300">
         <div className="flex items-center justify-between">
-          <h1 className="text-3xl font-bold text-stone-600 mb-2">{project.title}</h1>
-          <button className="text-stone-600 hover:text-stone-950" onClick={() => clickDelete(project.id)}>
+          <h1 className="text-3xl font-bold text-stone-600 mb-2 dark:text-white">{project.title}</h1>
+          <button className="text-stone-600 hover:text-stone-950  dark:text-stone-200 dark:hover:text-white" onClick={() => clickDelete(project.id)}>
             삭제
           </button>
         </div>
-        <p className="mb-4 text-stone-400">{project.date}</p>
-        <p className="text-stone-600 whitespace-pre-wrap">{project.body}</p>
+        <p className="mb-4 text-stone-400 dark:text-stone-50">{project.date}</p>
+        <p className="text-stone-600 whitespace-pre-wrap dark:text-white">{project.body}</p>
       </header>
       <section>
-        <h2 className="text-2xl font-bold text-stone-700 mb-4">타스크!</h2>
+        <h2 className="text-2xl font-bold text-stone-700 mb-4 dark:text-white">타스크!</h2>
         <div className="flex items-center gap-4">
           <input className="w-64 px-2 py-1 rounded-sm bg-pink-100" type="text" ref={inputRef} />
-          <button className="text-stone-700 hover:text-stone-950" onClick={addTask}>
+          <button className="text-stone-700 hover:text-stone-950 dark:text-stone-200 dark:hover:text-white" onClick={addTask}>
             더하기
           </button>
         </div>
         {tasks.length === 0 ? (
-          <p className="text-stone-800 my-4">코메트따위 없다</p>
+          <p className="text-stone-800 my-4 dark:text-white">코메트따위 없다</p>
         ) : (
           tasks.map((task) => {
             return <AddTask key={task.id} id={task.id} task={task.value} deleteTask={deleteTask} />;

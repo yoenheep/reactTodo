@@ -37,7 +37,7 @@ export default function AddProject({ setPage, setProjects }) {
     <div className="w-[35rem] mt-16">
       <menu className="flex items-center justify-end gap-4 my-4">
         <li>
-          <button className="text-stone-800 hover:text-stone-950" onClick={clickCancle}>
+          <button className="text-stone-800 hover:text-stone-950 dark:text-stone-200 dark:hover:text-white" onClick={clickCancle}>
             하지마
           </button>
         </li>
@@ -49,15 +49,15 @@ export default function AddProject({ setPage, setProjects }) {
       </menu>
       <div>
         <p className="flex flex-col gap-1 my-4">
-          <label className="text-sm font-bold uppercase text-stone-500">Title</label>
+          <label className="text-sm font-bold uppercase text-stone-500 dark:text-stone-300">Title</label>
           <input className="w-full p-1 border-b-2 rounded-sm border-pink-100 bg-pink-50 text-stone-600 focus:outline-none focus:border-pink-500" type="text" name="title" onChange={handleTodo} value={todo.title}></input>
         </p>
         <p className="flex flex-col gap-1 my-4">
-          <label className="text-sm font-bold uppercase text-stone-500">Description</label>
+          <label className="text-sm font-bold uppercase text-stone-500 dark:text-stone-300">Description</label>
           <textarea className="w-full p-1 border-b-2 rounded-sm border-pink-100 bg-pink-50 text-stone-600 focus:outline-none focus:border-pink-500" name="body" onChange={handleTodo} value={todo.body}></textarea>
         </p>
         <p className="flex flex-col gap-1 my-4">
-          <label className="text-sm font-bold uppercase text-stone-500">Due Date</label>
+          <label className="text-sm font-bold uppercase text-stone-500 dark:text-stone-300">Due Date</label>
           <input className="w-full p-1 border-b-2 rounded-sm border-pink-100 bg-pink-50 text-stone-600 focus:outline-none focus:border-pink-500" type="date" name="date" onChange={handleTodo} value={todo.date}></input>
         </p>
       </div>
