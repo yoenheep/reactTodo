@@ -1,4 +1,10 @@
-export default function AsideTitle({ title, clickTitle, project, projectId, page }) {
+export default function AsideTitle({
+  title,
+  clickTitle,
+  project,
+  projectId,
+  page,
+}) {
   const isSelected = project.id === projectId && page === "click";
   return (
     <li>

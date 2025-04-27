@@ -24,5 +24,9 @@ export function ThemeProvider({ children }) {
     });
   };
 
-  return <ThemeContext.Provider value={{ theme, changeThemes }}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={{ theme, changeThemes }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 }
